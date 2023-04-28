@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
 		<title> CTTBK • MainPage </title>
 		<link href="./ctt.css" type="text/css" rel="stylesheet">
+		<script src="./ctt.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body id="body-main">
 		<div class="headerPane">
@@ -99,7 +100,7 @@
 			<div class="nav-bar">
 				<div class="nav-bar-wrapper">
 					<div class="nav-bar-header">
-						<img class="student-picture-small" src="./student-picture.png">
+						<img class="student-picture-small" id="student-picture-small" src="./student-picture.png">
 						<span class="text-heading">TRẦN VÂN NGỌC</span>
 					</div>
 					<div class="nav-bar-members">
@@ -220,23 +221,29 @@
                 </div>
     
                 <div class="page_edit">
-                    <div class="row" style="display: flex;">
-                        <form action="./ctt.html" method="post">
+					<div class="page_info_header">
+						<div class="page_header_label page_main_label">Thông tin sinh viên
+							<img class="top-menu-item-icon" src="editing.png" style="cursor: pointer;" onclick="enable_edit()">
+						</div>
+						<hr class="page_header_seperate">
+					</div>
+                    <div class="row" style="display: block;">
+                        <form action="./ctt.html" method="get">
                         <div class="col-4 px-5">
                             <div class="avatar-edit-wrapper">
                                 <div class="page_avatar">
                                     <div class="avatar-wrapper">
-                                        <img src="./student-picture.png" alt="Avatar">
+                                        <img id="student-avatar" src="./student-picture.png" alt="Avatar">
                                     </div>
                                 </div>
                                 <div class="avatar-edit">
                                     <div class="edit-form">
                                         <label class="edit-form-label">Avatar:</label>
-                                        <input class="edit-form-input" type="file">
+                                        <input class="edit-form-input" id="me.Avatar" type="file" accept="image/*" disabled>
                                     </div>
                                     <div class="edit-form">
                                         <label class="edit-form-label">MSSV:</label>
-                                        <input class="form-control form-control-sm" type="text" value="20204766" disabled>
+                                        <input class="form-control form-control-sm" type="text" value="20200443" id="me.Mssv" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -245,23 +252,23 @@
                             <div class="edit-form-wrapper">
                                 <div class="edit-form">
                                     <label class="edit-form-label">Họ và tên:</label>
-                                    <input class="form-control form-control-sm" type="text" value="Trần Vân Ngọc">
+                                    <input class="form-control form-control-sm" type="text" id="me.Name" value="Trần Vân Ngọc" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <label class="edit-form-label">Năm vào trường:</label>
-                                    <input class="form-control form-control-sm" type="number" min="1900" max="2100" step="1" value="2020">
+                                    <input class="form-control form-control-sm" id="me.Year" type="number" min="1900" max="2100" step="1" value="2020" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <label class="edit-form-label">Bậc đào tạo:</label>
-                                    <input class="form-control form-control-sm" type="text" value="Đại học đại trà">
+                                    <input class="form-control form-control-sm" id="me.Degree" type="text" value="Đại học đại trà" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <label class="edit-form-label">Chương trình:</label>
-                                    <input class="form-control form-control-sm" type="text" value="Kỹ thuật Máy tính 2020">
+                                    <input class="form-control form-control-sm" id="me.Program" type="text" value="Kỹ thuật Máy tính 2020" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <label class="edit-form-label">Khoa/Viện quản lý:</label>
-                                    <select id="department" name="department">
+                                    <select id="me.Department" name="department" disabled>
                                         <option value="sme">Trường Cơ khí</option>
                                         <option value="sbft">Viện Công nghệ Sinh học và Công nghệ Thực phẩm</option>
                                         <option value="soict" selected>Trường Công nghệ Thông tin và Truyền thông</option>
@@ -281,11 +288,11 @@
                                 <div class="edit-form">
                                     <label class="edit-form-label">Tình trạng học tập:</label>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" id="inlineCheckbox1" type="radio" name="study-status" value="Học" checked>
+                                        <input class="form-check-input" id="inlineCheckbox1" type="radio" name="study-status" value="ongoing" checked disabled>
                                         <label class="form-check-label" for="inlineCheckbox1">Học</label>
                                     </div>
                                     <div class="form-check form-check-inline ml-5">
-                                        <input class="form-check-input" id="inlineCheckbox2" type="radio" name="study-status" value="Thôi học">
+                                        <input class="form-check-input" id="inlineCheckbox2" type="radio" name="study-status" value="stop" disabled>
                                         <label class="form-check-label" for="inlineCheckbox2">Thôi học</label>
                                     </div>
                                 </div>
@@ -296,33 +303,35 @@
                                 <div class="edit-form">
                                     <div class="edit-form-label">Giới tính:</div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" id="inlineCheckbox3" type="radio" name="sex" value="Nam">
+                                        <input class="form-check-input" id="inlineCheckbox3" type="radio" name="gender" value="male" disabled>
                                         <label class="form-check-label" for="inlineCheckbox3">Nam</label>
                                     </div>
                                     <div class="form-check form-check-inline ml-5">
-                                        <input class="form-check-input" id="inlineCheckbox4" type="radio" name="sex" value="Nữ" checked>
+                                        <input class="form-check-input" id="inlineCheckbox4" type="radio" name="gender" value="female" disabled>
                                         <label class="form-check-label" for="inlineCheckbox4">Nữ</label>
                                     </div>
                                 </div>
                                 <div class="edit-form">
                                     <div class="edit-form-label">Lớp:</div>
-                                    <input class="form-control form-control-sm" type="text" value="Kỹ thuật máy tính 01-K65">
+                                    <input class="form-control form-control-sm" id="me.S_class" type="text" value="Kỹ thuật máy tính 01-K65" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <div class="edit-form-label">Khóa học:</div>
-                                    <input class="form-control form-control-sm" type="number" min="0" max="100" step="1" value="65">
+                                    <input class="form-control form-control-sm" id="me.Khoa" type="number" min="0" max="100" step="1" value="65" disabled>
                                 </div>
                                 <div class="edit-form">
                                     <div class="edit-form-label">Email:</div>
-                                    <input class="form-control form-control-sm" type="email" value="ngoc.tv200443@sis.hust.edu.vn">
+                                    <input class="form-control form-control-sm" id="me.Email" type="email" value="ngoc.tv200443@sis.hust.edu.vn" disabled>
                                 </div>
                             </div>
                         </div>
+						</form>
                         <div class="page_info_submit">
-                            <input class="button-submit" type="submit" value="OK">
-                            <a href="./ctt.html" role="button" class="button-cancel">Cancel</a>
+							<button type="button" id="button-submit" onclick="submit()">OK</button>
+                            <button type="cancel" id="button-cancel" onclick="cancel()">Cancel</button>
+							<button id="button-reset" onclick="reset()">Reset</button>
                         </div>
-                        </form>
+                        
                     </div>
                 </div>
     
@@ -344,5 +353,20 @@
             </div>
         </div>
     	</footer>
+		<script>
+			// console.log(me);
+			display(me);
+			
+			const avatar = document.getElementById("me.Avatar");
+
+			avatar.onchange = evt => {
+				const img = document.getElementById("student-avatar");
+				const [file] = avatar.files;
+				if (file) {
+					prev_img_src = img.src;
+					img.src = URL.createObjectURL(file)
+				}
+			}
+		</script>
 	</body>
 </html>

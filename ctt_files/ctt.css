@@ -530,27 +530,40 @@ select {
     margin-bottom: 4px;
 }
 
-.button-cancel {
+#button-cancel {
     border: none;
     background-color: rgb(240, 103, 103);
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: none;
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
   }
 
-.button-submit {
+#button-submit {
     border: solid 1px;
     background-color: rgb(127, 226, 127);
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  #button-reset {
+    border: solid 1px;
+    background-color: rgb(95, 94, 89);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
