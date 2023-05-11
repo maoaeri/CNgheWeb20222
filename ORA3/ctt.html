@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+		<title> CTTBK • MainPage </title>
+		<link href="./ctt.css" type="text/css" rel="stylesheet">
+		<script src="./ctt.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="./jspdf.umd.min.js"></script> -->
+		<!-- <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script> -->
+
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.2/pdfmake.min.js"></script>
+
+	</head>
+	<body id="body-main">
+		<div class="headerPane">
+			<!-- <div class="header-line-not-fixed">
+			</div> -->
+			<div class="header-line">
+			</div>
+			
+			<div class="container">
+				<img class="img-header-logo" id="HeaderPaneLogo" src="./logo-cttdt.png">
+			</div>
+		</div>
+		<div class="topMenu">
+			<div class="top-menu">
+				<div class="top-menu-main top-menu-horizontal">
+					<ul class="img-ul-top-menu" style="width: 100%;">
+						<li class="top-menu-item">
+							<div class="top-menu-item-content" id="TopMenuPane_menuTop_01_Content" style="float: none; padding-right: 21px;">
+								<img class="top-menu-item-icon" src="./open-folder.png">
+								<span class="top-menu-item-name">Đào tạo Đại học</span>
+							</div>
+							<div class="top-menu-item-dropdown-menu">
+								<ul>
+									<li><a href="#">Quy định - Quy chế</a></li>
+									<li><a href="#">Các ngành đào tạo</a></li>
+									<li><a href="#">Kế hoạch học tập</a></li>
+									<li><a href="#">Tin tức - Thông báo</a></li>
+									<li><a href="#">Thông tin văn bằng 2</a></li>
+									<li><a href="#">Chương trình đặc biệt</a></li>
+									<li><a href="#">Biểu mẫu</a></li>
+									<li><a href="#">Liên hệ</a></li>
+								</ul>
+							</div>
+							<div class="top-menu-item-icon-dropdown" style="display: grid; margin-top: -28px;">
+								<img class="top-menu-item-icon" src="./drop-down-arrow.png" alt="v" style="margin-top: 10px; justify-self: end;">
+							</div>
+						</li>
+						<li class="top-menu-item" style="font-size: medium; min-width: 45px; width: 25%;" id="TopMenuPane_menuTop_02">
+							<div class="top-menu-item-content" id="TopMenuPane_menuTop_02_Content" style="float: none; padding-left: 7px; padding-right: 21px;">
+								<img class="top-menu-item-icon" src="./open-folder.png">
+								<span class="top-menu-item-name">Đào tạo Sau đại học</span>
+							</div>
+							<div class="top-menu-item-dropdown-menu">
+								<ul>
+									<li><a href="#">Tuyển sinh</a></li>
+									<li><a href="#">Đào tạo</a></li>
+									<li><a href="#">Mẫu văn bản giấy tờ</a></li>
+									<li><a href="#">Văn bản - Quy chế</a></li>
+									<li><a href="#">Thông tin văn bằng</a></li>
+									<li><a href="#">Trang thông tin cá nhân</a></li>
+									<li><a href="#">Liên hệ</a></li>
+								</ul>
+							</div>
+							<div class="top-menu-item-icon-dropdown" style="display: grid; margin-top: -28px;">
+								<img class="top-menu-item-icon" src="./drop-down-arrow.png" alt="v" style="margin-top: 10px; justify-self: end;">
+							</div>
+						</li>
+						<li class="top-menu-item" style="font-size: medium; min-width: 45px; width: 25%;">
+							<div class="top-menu-item-content" id="TopMenuPane_menuTop_DXI2_T" style="float: none; padding-left: 7px; padding-right: 21px;">
+								<img class="top-menu-item-icon" src="./open-folder.png" alt="" id="TopMenuPane_menuTop_DXI2_Img"><span class="top-menu-item-name">Công tác Sinh viên</span>
+							</div>
+							<div class="top-menu-item-dropdown-menu">
+								<ul>
+									<li><a href="#">Thông báo</a></li>
+									<li><a href="#">Hỏi - Đáp</a></li>
+									<li><a href="#">Học phí</a></li>
+									<li><a href="#">Học bổng tài trợ</a></li>
+									<li><a href="#">Việc làm</a></li>
+									<li><a href="#">Biểu mẫu</a></li>
+									<li><a href="#">Cựu sinh viên</a></li>
+									<li><a href="#">Liên hệ</a></li>
+								</ul>
+							</div>
+							<div class="top-menu-item-icon-dropdown" style="display: grid; margin-top: -28px;">
+								<img class="top-menu-item-icon" src="./drop-down-arrow.png" alt="v" style="margin-top: 10px; justify-self: end;">
+							</div>
+						</li>
+						<li class="top-menu-item" id="TopMenuPane_menuTop_DXI3_" style="min-width: 45px; width: 25%;">
+							<div class="top-menu-item-content" href="#" style="font-size: medium; float: none;">
+								<img class="top-menu-item-icon" src="./open-folder.png">
+								<span class="top-menu-item-name">Tra cứu văn bằng</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+		</div>
+		<div class="mainpage-panel">
+			<a href="#">Trang chủ</a>
+		</div>
+		<div id="page-info">
+			<div class="nav-bar">
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<img class="student-picture-small" src="./student-picture.png">
+						<span class="text-heading">TRẦN VÂN NGỌC</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<li><a href="">Thư báo<span class="navigation_quantity">0</span></a></li>
+							<li><a href="">Đổi mật khẩu</a></li>
+							<li><a href="">Cấp lại mật khẩu Email trường</a></li>
+							<li><a href="">Thoát đăng nhập</a></li>
+							<li><a href="">Thông tin mật khẩu Email cấp mới</a></li>
+							<li><a href="">Xác nhận khai báo y tế</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<span class="text-heading">QUẢN LÝ HỒ SƠ SINH VIÊN</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<li><a href="">Thông tin sinh viên</a></li>
+							<li><a href="">Cập nhật thông tin cá nhân</a></li>
+							<li><a href="">Thông tin lớp sinh viên</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<span class="text-heading">ĐÀO TẠO</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<div class="nav-bar-arrow">
+								<div class="nav-bar-arrow-parent">
+									<img class="right-arrow" src="./right-arrow.png">
+									<li><a href="">Chương trình đào tạo</a></li>
+								</div>
+								<ul class="nav-bar-list drop-down">
+									<li><a href="">Chương trình đào tạo sinh viên</a></li>
+									<li><a href="">Danh mục học phần</a></li>
+								</ul>
+							</div>
+							<div class="nav-bar-arrow">
+								<div class="nav-bar-arrow-parent">
+									<img class="right-arrow" src="./right-arrow.png">
+									<li><a href="">Kế hoạch học tập</a></li>
+								</div>
+								<ul class="nav-bar-list drop-down">
+									<li><a href="">Đăng ký học phần</a></li>
+									<li><a href="">Thời khóa biểu</a></li>
+									<li><a href="">Tra cứu đăng ký lớp các kỳ</a></li>
+								</ul>
+							</div>
+							<div class="nav-bar-arrow">
+								<div class="nav-bar-arrow-parent">
+									<img class="right-arrow" src="./right-arrow.png">
+									<li><a href="">Kết quả học tập</a></li>
+								</div>
+								<ul class="nav-bar-list drop-down">
+									<li><a href="">Kết quả thi TOEIC</a></li>
+									<li><a href="">Bảng điểm cá nhân</a></li>
+									<li><a href="">Bảng điểm học phần</a></li>
+									<li><a href="">Kiểm tra nhập điểm kỳ mới nhất</a></li>
+								</ul>
+							</div>
+							<div class="nav-bar-arrow">
+								<div class="nav-bar-arrow-parent">
+									<img class="right-arrow" src="./right-arrow.png">
+									<li><a href="">Đồ án - Tốt nghiệp</a></li>
+								</div>
+								<ul class="nav-bar-list drop-down">
+									<li><a href="">Kết quả xét nhận ĐATN</a></li>
+									<li><a href="">Đăng ký xét tốt nghiệp</a></li>
+								</ul>
+							</div>
+							<li><a href="">Thời khóa biểu tạm thời</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<span class="text-heading">TƯ VẤN TRỰC TUYẾN
+						</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<li><a href="">Hỏi đáp - Tư vấn trực tuyến</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<span class="text-heading">TÀI CHÍNH HỌC VỤ
+						</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<li><a href="">Thông tin công nợ học phí</a></li>
+							<li><a href="">Thanh toán học phí trực tuyến</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-bar-wrapper">
+					<div class="nav-bar-header">
+						<span class="text-heading">DỊCH VỤ HÀNH CHÍNH
+						</span>
+					</div>
+					<div class="nav-bar-members">
+						<ul class="nav-bar-list">
+							<li><a href="">ĐK cấp giấy tờ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="info" id="student-info" style="padding: 20px;">
+				<div class="page_header">
+					<div class="page_label page_main_label">
+						THÔNG TIN CÁ NHÂN&nbsp;&nbsp;&nbsp;
+						<img class="top-menu-item-icon" src="pdf.png" onclick="exportPDF()">
+					</div>
+
+					<hr class="page_label_seperate">
+				</div>
+	
+				<div class="page_content">
+					<div class="page_info" style="width: 1000px;">
+						<div class="page_info_header">
+							<div class="page_header_label page_main_label"><span class="group-name">Thông tin sinh viên_20200443</span>
+								<button type="button" class="button-add-info">Add Info Item</button>
+								<button type="button" class="button-add-group">Add Group Item</button>
+							</div>
+							
+							<hr class="page_header_seperate">
+						</div>
+						<div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    	<footer class="footer">
+        <div class="footerContent">
+            <div class="footerMain">
+                <div class="footerLeft">
+                </div>
+                <div class="footerRight">
+                    <hr>
+                    <b>Trường Đại học Bách Khoa Hà Nội</b>
+                    <br>
+                    <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
+                </div>
+            </div>
+        </div>
+    	</footer>
+		<script>
+			const buttons_add_group = [...document.querySelectorAll('.button-add-group')];
+			const buttons_add_info = [...document.querySelectorAll('.button-add-info')];
+			const spans_group_name = document.querySelectorAll('.group-name');
+
+			// Add event listeners for double-click
+			spans_group_name.forEach((spanElement) => {
+				// spanElement.innerHTML += '_20200443';
+				spanElement.addEventListener('dblclick', () => {
+					addEventListenerToSpanGroupName(spanElement);
+				});
+			});
+
+			function addEventListenerToSpanGroupName(spanElement) {
+				// Replace the span element with an input element
+				const inputElement = document.createElement('input');
+				inputElement.value = spanElement.innerHTML.replace('_20200443', '');
+				spanElement.replaceWith(inputElement);
+
+				// Add event listener for keydown
+				inputElement.addEventListener('keydown', (event) => {
+					// Check if the Enter key was pressed
+					if (event.key === 'Enter') {
+						// Replace the input element with a span element
+						const newSpanElement = spanElement;
+						newSpanElement.innerHTML = inputElement.value + '_20200443';
+						inputElement.replaceWith(newSpanElement);
+					}
+				});	
+			}
+
+			function addEventListenerToLabelItemName(labelElement) {
+				// Replace the span element with an input element
+				const inputElement = document.createElement('input');
+				inputElement.value = labelElement.textContent;
+				labelElement.replaceWith(inputElement);
+
+				// Add event listener for keydown
+				inputElement.addEventListener('keydown', (event) => {
+					// Check if the Enter key was pressed
+					if (event.key === 'Enter') {
+						// Replace the input element with a span element
+						const newlabelElement = labelElement;
+						newlabelElement.textContent = inputElement.value;
+						newlabelElement.style = 'width: 30%;';
+						inputElement.replaceWith(newlabelElement);
+
+					}
+				});
+			}
+
+			function addEventListenerToButtonsAddInfo(button) {
+				console.log(buttons_add_info);
+				const parentDiv = button.parentElement.parentElement;
+				const nextDiv = parentDiv.nextElementSibling;
+				const newLabel = document.createElement('label');
+				const newDiv = document.createElement('div');
+				newDiv.style = 'display: flex; padding-left: 20px; padding-right: 20px';
+				
+				newLabel.textContent = 'Item Info Name';
+				newLabel.style = 'width: 30%;';
+				newLabel.addEventListener('dblclick', function(){
+					addEventListenerToLabelItemName(newLabel);
+				})
+
+				const newInput = document.createElement('input');
+				newInput.type = 'text';
+				newInput.name = 'new-input';
+				newInput.id = 'new-input';
+				newInput.readOnly = true;
+				newInput.style = "width: 50%"
+				newInput.addEventListener('dblclick', function(){
+					newInput.readOnly = false
+				})
+
+				const img = document.createElement('img');
+				img.className = 'top-menu-item-icon';
+				img.src = './bin.png';
+				img.style = "margin-left: 10px";
+
+				const select = document.createElement('select');
+
+				const textOption = document.createElement('option');
+				textOption.value = 'text';
+				textOption.text = 'Text';
+				select.appendChild(textOption);
+
+				const numberOption = document.createElement('option');
+				numberOption.value = 'number';
+				numberOption.text = 'Number';
+				select.appendChild(numberOption);
+
+				const dateOption = document.createElement('option');
+				dateOption.value = 'date';
+				dateOption.text = 'Date';
+				select.appendChild(dateOption);
+				select.style = "margin-left: 20px; width: 50%";
+
+				newDiv.appendChild(newLabel);
+				newDiv.appendChild(newInput);
+				newDiv.appendChild(select);
+				newDiv.appendChild(img);
+				nextDiv.appendChild(newDiv);
+
+				img.addEventListener('click', function() {
+					let choice = confirm("Bạn có muốn xóa thông tin " + newLabel.textContent + "?")
+					if (choice == true) {
+						img.parentElement.remove();
+					}
+				});
+
+				select.addEventListener('change', () => {
+					newInput.type = select.value;
+				});
+			}
+
+			function addEventListenerToButtonsAddGroup(button) {
+				const parent3Div = button.parentElement.parentElement.parentElement;
+				const pageContainer = document.createElement('div');
+
+				parent3Div.appendChild(pageContainer);
+
+				pageContainer.classList.add('page_info');
+
+				const pageHeader = document.createElement('div');
+				pageHeader.classList.add('page_info_header');
+
+				const pageHeaderLabel = document.createElement('div');
+				pageHeaderLabel.classList.add('page_header_label', 'page_main_label');
+
+				const headerSpan = document.createElement('span');
+				headerSpan.textContent = 'Group Item_20200443';
+				headerSpan.addEventListener('dblclick', () => {
+					addEventListenerToSpanGroupName(headerSpan);
+				});
+				pageHeaderLabel.appendChild(headerSpan);
+
+				const img = document.createElement('img');
+				img.className = 'top-menu-item-icon';
+				img.src = './bin.png';
+				img.style = "margin-left: 10px"
+				pageHeaderLabel.appendChild(img);
+
+				const addButton = document.createElement('button');
+				addButton.setAttribute('type', 'button');
+				addButton.classList.add('button-add-info');
+				addButton.textContent = 'Add Info Item';
+				addButton.addEventListener('click', function() {
+					addEventListenerToButtonsAddInfo(addButton)
+				});
+
+				const addGroupButton = document.createElement('button');
+				addGroupButton.setAttribute('type', 'button');
+				addGroupButton.classList.add('button-add-group');
+				addGroupButton.textContent = 'Add Group Item';
+				addGroupButton.addEventListener('click', function() {
+					addEventListenerToButtonsAddGroup(addButton)
+				});
+
+				pageHeaderLabel.appendChild(addButton);
+				pageHeaderLabel.appendChild(addGroupButton);
+
+				const hr = document.createElement('hr');
+				hr.classList.add('page_header_seperate');
+
+				const div = document.createElement('div');
+
+				pageHeader.appendChild(pageHeaderLabel);
+				pageHeader.appendChild(hr);
+
+				pageContainer.appendChild(pageHeader);
+				pageContainer.appendChild(div);
+
+				img.addEventListener('click', function() {
+					let choice = confirm("Bạn có muốn xóa nhóm thông tin " + headerSpan.textContent + "?")
+					if (choice == true) {
+						img.parentElement.parentElement.parentElement.remove();
+					}
+				})
+			}
+
+			function exportPDF() {
+				const studentInfo = document.getElementById('student-info');
+				html2canvas(studentInfo, {
+					allowTaint: true,
+					foreignObjectRendering: false,
+					useCORS:true
+				}).then(canvas => {
+					// Use pdfMake to create a new PDF document
+					const dataUrl = canvas.toDataURL();
+					console.log(dataUrl);
+					// const newImage = document.createElement("img");
+					// newImage.src = 
+					const docDefinition = {
+						content: [
+						{
+							image: dataUrl,
+							width: 500
+						}
+						]
+					};
+					pdfMake.createPdf(docDefinition).open();//download('student-info.pdf');
+				});
+			}
+			
+			
+			buttons_add_info.forEach(function(button) {
+				button.addEventListener('click', function() {
+					addEventListenerToButtonsAddInfo(button);
+				});
+			});
+
+			buttons_add_group.forEach(function(button) {
+				button.addEventListener('click', function() {
+					addEventListenerToButtonsAddGroup(button);
+				});
+			});			
+		</script>
+	</body>
+</html>
