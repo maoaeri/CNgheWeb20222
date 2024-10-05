@@ -336,13 +336,24 @@
 				newInput.readOnly = true;
 				newInput.style = "width: 50%"
 				newInput.addEventListener('dblclick', function(){
-					newInput.readOnly = false
+					newInput.readOnly = false;
+					newInput.addEventListener('keydown', (event) => {
+						// Check if the Enter key was pressed
+						if (event.key === 'Enter') {
+							// Replace the input element with a span element
+							newInput.readOnly = true;
+						}
+					});
 				})
 
 				const img = document.createElement('img');
 				img.className = 'top-menu-item-icon';
 				img.src = './bin.png';
 				img.style = "margin-left: 10px";
+
+				const labelType = document.createElement('label');
+				labelType.textContent = 'Kiểu thông tin';
+				labelType.style = 'margin-left: 20px; width: 20%';
 
 				const select = document.createElement('select');
 
@@ -364,6 +375,7 @@
 
 				newDiv.appendChild(newLabel);
 				newDiv.appendChild(newInput);
+				newDiv.appendChild(labelType);
 				newDiv.appendChild(select);
 				newDiv.appendChild(img);
 				nextDiv.appendChild(newDiv);
@@ -454,7 +466,6 @@
 				}).then(canvas => {
 					// Use pdfMake to create a new PDF document
 					const dataUrl = canvas.toDataURL();
-					console.log(dataUrl);
 					// const newImage = document.createElement("img");
 					// newImage.src = 
 					const docDefinition = {
@@ -465,7 +476,7 @@
 						}
 						]
 					};
-					pdfMake.createPdf(docDefinition).open();//download('student-info.pdf');
+					pdfMake.createPdf(docDefinition).download('student-info.pdf');
 				});
 			}
 			
